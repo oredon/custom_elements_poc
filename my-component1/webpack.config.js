@@ -10,7 +10,7 @@ module.exports = () => {
     return {
         mode: process.env.NODE_ENV,
         entry: {
-            main: convertRootPath('src/html-element.js')
+            main: convertRootPath('src/my-component1.js')
         },
         output: {
             path: path.resolve(__dirname, '../dist/my-component1'),
@@ -34,8 +34,8 @@ module.exports = () => {
         plugins: [
             new HtmlWebpackPlugin({
                 chunks: ['main'],
-                filename: 'html-element.html',
-                template: convertRootPath('src/html-element.html'),
+                filename: 'my-component1.html',
+                template: convertRootPath('src/my-component1.html'),
                 inject: false
             }),
             new HtmlWebpackPlugin({
