@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "start": "node server.js"
+    "start": "node server.js",
+    "componentall": "npm-run-all component1 component2",
+    "component1": "cd my-component1 && cross-env NODE_ENV=production webpack",
+    "component2": "cd my-component2 && cross-env NODE_ENV=production webpack"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +26,7 @@
   },
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
+    "npm-run-all": "^4.1.5",
     "webpack-cli": "^3.3.0"
   }
 }
