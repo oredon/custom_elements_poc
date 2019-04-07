@@ -1,3 +1,6 @@
+// 子をimportする前に子でnpm run buildが必要です
+import '../dist/my-component1/my-component1';
+
 document.addEventListener('DOMContentLoaded', () => {
     const $app = document.getElementById("app");
     $app.innerHTML = `

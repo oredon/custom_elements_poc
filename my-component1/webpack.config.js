@@ -10,11 +10,11 @@ module.exports = () => {
     return {
         mode: process.env.NODE_ENV,
         entry: {
-            main: convertRootPath('src/my-component1.js')
+            "my-component1": convertRootPath('src/my-component1.js')
         },
         output: {
             path: path.resolve(__dirname, '../dist/my-component1'),
-            filename: '[name].[hash].js'
+            filename: '[name].js'
         },
         resolve: {
             extensions: ['.js']

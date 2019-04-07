@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>dev確認用ダミーHTML（npm run devのときだけ使う）</title>
-    <link rel="import" href="my-component1.html">
+    <!--<script src="my-component1.js"></script>-->
+    <script type="module">
+        import './my-component1.js';
+    </script>
 </head>
 <body>
     <my-component1 testProp="React my component1"></my-component1>

@@ -3,7 +3,7 @@ import React from 'react'
 import { render } from 'react-dom';
 import { App } from './App';
 
-window.customElements.define('my-component1', class ReactApp extends HTMLElement {
+export default class ReactApp extends HTMLElement {
     connectedCallback() {
         this.render();
     }
@@ -12,4 +12,6 @@ window.customElements.define('my-component1', class ReactApp extends HTMLElement
         // react-domでReactComponent（App.js）をマウント
         render(<App testProp={"testProp"}/>, this);
     }
-});
+}
+
+window.customElements.define('my-component1', ReactApp);
